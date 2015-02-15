@@ -1,0 +1,91 @@
+@font-face {
+			font-family: 'icomoon';  /*自定义的字体名称*/
+			src:url('../fonts/icomoon.eot?v77b0v');
+			src:url('../fonts/icomoon.eot?#iefixv77b0v') format('embedded-opentype'),
+				url('../fonts/icomoon.woff?v77b0v') format('woff'),
+				url('../fonts/icomoon.ttf?v77b0v') format('truetype'),
+				url('../fonts/icomoon.svg?v77b0v#icomoon') format('svg');
+			font-weight: normal;
+			font-style: normal;
+}
+
+
+
+
+
+header{
+	background-color: #A0202C;
+	height: 40px;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	color: #ffffff;
+	display: flex;
+    display: -webkit-box;
+    display: -webkit-flex; 
+    display: -moz-box;
+    display: -webkit-flex;
+
+}
+
+footer{
+	height: 56px;
+	background: #2d4152;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	font-size: 14px;
+	color: #a1a1a2;
+}
+footer a{
+	color: #a1a1a2;
+}
+.font-active{
+	color: #ffffff;
+}
+footer, footer ul {
+	/*float: left;
+	width: 100%;
+	text-align: center;*/
+	display: flex;
+    display: -webkit-box;
+    display: -webkit-flex; 
+    display: -moz-box;
+    display: -webkit-flex;
+}
+footer ul li {
+	/*float: left;
+	list-style: none;
+	width:20%;
+	padding-top: 7px;*/
+	flex:1;
+    -webkit-box:1;
+    -webkit-flex:1;
+    -moz-box:1;
+    -webkit-flex:1;
+    margin: auto;
+    text-align: center;
+
+}
+/*footer ul li img {
+	width: 28px;
+	height: 28px;
+}*/
+footer ul li span {
+	display: block;
+}  
+footer ul li span:first-child{
+	font-family:icomoon;
+	font-size: 28px;
+}
+footer a:hover{
+ 	color: #ffffff;
+ 	cursor: pointer;
+}
+/*footer a img:hover{
+	filter:brightness(0);
+	-webkit-filter: brightness(0);
+    -moz-filter: brightness(0);
+    -ms-filter: brightness(0);
+    -o-filter: brightness(0);
+}*/

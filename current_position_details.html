@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#a0202c">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,uer-scalabe=no"> 
+	<meta name="theme-color" content="#a0202c">
+	<title>持仓明细</title>
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/Inner_header.css">
+	<link rel="stylesheet" type="text/css" href="css/current_position_detail.css">
+</head>
+<body>
+	<header>
+        <div>
+        <div id="back_arrow" class="back" onclick="location.href='index.html';">
+            <div class="one"></div>
+            <div class="two"></div>
+            <span>返回<span>
+        </div>
+		</div>
+		<div class="title">
+			<span>持仓明细</span>
+		</div>
+		<div class="pic">
+			<img src="img/purse.png">
+		</div>
+	</header>
+	
+	<div id="wrap">
+		<div id="content">
+			<div id="title">
+				<table>
+					<thead>
+						<tr>
+							<th>商品</th>
+							<th>建仓数量</th>
+							<th>持仓数量</th>
+							<th>浮动盈亏</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><span class="font-red">卖出</span>大圆银100kg</td>
+							<td>100</td>
+							<td>100</td>
+							<td class="font-red">2000</td>
+						</tr>
+						<tr>
+							<td colspan="4"><span>建仓时间：</span>2014-12-25 13:20:08</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="details" class="wrap-grey">
+				<div class="line-dashed"></div>
+				<ul>
+					<li>持仓单号：<span>3418366</span></li>
+					<li>买/卖：<span>卖出</span></li>
+				</ul>
+				<ul>
+					<li>建仓号：<span>2750</span></li>
+					<li>占用保证金：<span>1131.60</span></li>
+				</ul>
+				<ul>
+					<li>持仓价：<span>2750</span></li>
+					<li>平仓价：<span>2750</span></li>
+				</ul>
+				<ul>
+					<li>止损：<span>2750</span></li>
+					<li>止盈：<span>2750</span></li>
+				</ul>
+				<div class="line-dashed"></div>
+			</div>
+			<!--<div id="operator" class="wrap-grey">
+				<div class="line">
+					<input type="button" value="市价平仓" class="btn-operate btn-bg-red" onclick="window.location.href='market_positions1.html'">
+					<input type="button" value="止盈止损" class="btn-operate btn-bg-blue" onclick="window.location.href='profit_and_loss.html'">
+				</div>
+				<div class="line">
+					<input type="button" value="撤销止盈" class="btn-operate btn-bg-grey">
+					<input type="button" value="撤销止损" class="btn-operate btn-bg-grey">
+				</div>
+			</div>-->
+			
+			<!-- <div id="operator" class="wrap-grey">
+				<div class="line">
+					<div class="btn-operate btn-bg-red"><a href="market_positions1.html">市价平仓</a></div>
+					<div class="btn-operate btn-bg-blue"><a href="profit_and_loss.html">止盈止损</a></div>
+				</div>
+				<div class="line">
+					<div class="btn-operate btn-bg-grey"><a href="javascript:void(0);">撤销止盈</a></div>
+					<div class="btn-operate btn-bg-grey"><a href="javascript:void(0);">撤消止损</a></div>
+				</div>
+			</div> -->
+
+
+			<div id="operator" class="wrap-grey">
+				<div class="line">
+					<a class="btn-operate btn-bg-red" href="market_positions1.html">市价平仓</a>
+					<a class="btn-operate btn-bg-blue" href="profit_and_loss.html">止盈止损</a>
+				</div>
+				<div class="line">
+					<a class="btn-operate btn-bg-grey" href="javascript:void(0);">撤销止盈</a>
+					<a class="btn-operate btn-bg-grey" href="javascript:void(0);">撤消止损</a>
+				</div>
+			</div>
+
+			<div class="line-solid"></div>
+
+		</div>
+	</div>
+
+	<!--<footer>
+		<ul>
+			<li><a><img src="img/market.svg"><span>行情</span></a></li>
+			<li><a><img src="img/news.svg"><span>资讯</span></a></li>
+			<li><a><img src="img/position.svg"><span>仓位</span></a></li>
+			<li><a><img src="img/deal.svg"><span>成交</span></a></li>
+			<li><a><img src="img/info.svg"><span>我的</span></a></li>
+		</ul>
+	</footer> -->
+
+	<footer>
+		<ul>
+			<li><a><span></span><span>行情</span></a></li>
+			<li><a><span></span><span>资讯</span></a></li>
+			<li><a class="font-active"><span></span><span>仓位</span></a></li>
+			<li><a><span></span><span>成交</span></a></li>
+			<li><a><span></span><span>我的</span></a></li>
+		</ul>
+	</footer> 
+</body>
+</html>

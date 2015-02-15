@@ -1,0 +1,10 @@
+.detail{ width:80%; background-color:#f2f9f1;  border-radius:6px; color:#000;}
+.title{ height:24px; line-height:24px; text-align:center; font-size:18px; font-weight:bold;}
+.detail .info{ height:22px;line-height:22px;font-size:16px; text-align: center;}
+/*.detail .info span{ width:48%; float:left;  }
+.detail .info .left{ margin-left:2%; }
+.detail .info .right{ margin-right:2%; text-align:right;}*/
+.detail .back{width: 100%;display: flex; display:-webkit-flex; display:-webkit-box;border-top: solid 1px #ccc;}
+.detail .p_back{ height:24px; line-height:24px; text-align:center; font-size:16px; flex:1;-webkit-flex:1;-webkit-box-flex:1;}
+.detail .p_back a{color:#017aff; text-decoration: none;}
+.line-right {height: 56px;width: 0;border-right: 1px solid #ccc;}
