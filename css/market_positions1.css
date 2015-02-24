@@ -96,8 +96,6 @@
 
 /*offset and backhand_position*/
 #offset .squared, #backhand_position .squared{
-	float: left;
-	width: 60%;
 	height: 30px;
 	line-height: 30px;
 }
@@ -110,10 +108,6 @@
 #offset .squared span, #backhand_position .squared span {
 	font-size: 11px;
 	color: #615f5d;
-}
-#offset .selector, #backhand_position .selector {
-	float: left;
-	width: 36%;
 }
 #backhand_position .squared, #backhand_position .selector {
 	padding:10px 0 20px 0;

@@ -16,46 +16,22 @@
 	<script type="text/javascript" src="js/selector.js"></script>
 </head>
 <body>
-	<header>
+	<header class="flex">
         <div id="back_arrow" class="back" onclick="location.href='market_positions1.html';">
             <div class="one"></div>
             <div class="two"></div>
             <span>返回</span>
         </div>
-		<div class="title">
+		<div class="title flex-2">
 			<span>市价平仓</span>
 		</div>
-		<div class="pic">
+		<div class="pic flex">
 			<img src="img/purse.png">
 		</div>
 	</header>
 	
 	<div id="wrap">
 		<div id="content">
-		<!--	<div id="news">
-				<div class="news-title">
-					<ul>
-						<li class="title-40">商品</li>
-						<li class="title-20">建仓数量</li>
-						<li class="title-20">持仓数量</li>
-						<li class="title-20">浮动盈亏</li>
-					</ul>
-				</div>
-				<div class="line-solid"></div>
-				<div class="news-body">
-					<ul>
-					<li class="title-40"><span class="font-red">卖出</span>大圆银100kg</li>
-					<li class="title-20">100</li>
-					<li class="title-20">100</li>
-					<li class="title-20"><span class="font-red">2000</span></li>
-					</ul>
-				</div>
-				<div class="news-body2">
-					<ul><li class="font-size"><span class="font-style">单号：</span>6666666x</li></ul>
-				</div>
-				<div class="line-solid"></div>
-			</div>  -->
-			
 			<div class="accountInfo" style="position:absolute; width:93%;">
 				<span class="accountInfo_j accountInfo_l"><i></i></span>
 				<span class="accountInfo_j accountInfo_r"><i></i></span>
@@ -72,8 +48,6 @@
 					<li><a href="javascript:void();" class="accountInfo_ul_li_a">2400.00</a></li>
 				</ul>
 			</div>
-
-
 
 			<div id="title">
 				<table>
@@ -110,12 +84,12 @@
             				<p>手数：</p>
             				<span class="font-red">最大可交易20000手</span>
             			</div>
-            			 <div class="selector left-selector">
-                        	<div class="s-left btn-bg">
+            			 <div class="selector left-selector flex">
+                        	<div class="s-left btn-bg flex">
                             	<div class="triangle-left"></div>
                         	</div> 
-                        	<div class="s-mid">10000</div> 
-                        	<div class="s-right btn-bg">
+                        	<div class="s-mid flex-1">10000</div> 
+                        	<div class="s-right btn-bg flex">
                             	<div class="triangle-right"></div>
                         	</div> 
                     	</div>
@@ -125,35 +99,38 @@
             			<div class="buy-in btn-bg">买进</div>
             		</div>
             		</div>
-            		<div id="offset" class="row">
-            			<div class="squared">
+            		<div id="offset" class="row flex">
+            			<div class="squared flex-2">
             				<input type="checkbox" value="None"/> 
                         	<span>允许成交价与报价的最大偏差</span>
                     	</div>
-            			<div class="selector">
-                        	<div class="s-left btn-bg">
+            			<div class="selector flex flex-1">
+                        	<div class="s-left btn-bg flex">
                             	<div class="triangle-left"></div>
                         	</div> 
-                        	<div class="s-mid s-mid-grey">10</div> 
-                        	<div class="s-right btn-bg">
+                        	<div class="s-mid s-mid-grey flex-1">10</div> 
+                        	<div class="s-right btn-bg flex">
                         	<div class="triangle-right"></div>
                         	</div> 
             			</div>
             		</div>
-            		<div id="backhand_position" class="row">
+            		
+            		<div id="backhand_position" class="row flex direction">
             			<div class="line-dashed"></div>
-            			<div class="squared">
+            			<div class="flex">
+            			<div class="squared flex-2">
             				<input type="checkbox" value="None"/> 
                         	<span>允许反手建仓</span>
                     	</div>
-            			<div class="selector">
-                        	<div class="s-left btn-bg">
+            			<div class="selector flex flex-1">
+                        	<div class="s-left btn-bg flex">
                             	<div class="triangle-left"></div>
                         	</div> 
-                        	<div class="s-mid s-mid-grey">10</div> 
-                        	<div class="s-right btn-bg">
+                        	<div class="s-mid s-mid-grey flex-1">10</div> 
+                        	<div class="s-right btn-bg flex">
                         	<div class="triangle-right"></div>
                         	</div> 
+            			</div>
             			</div>
             		</div>
             		<div id="button" class="button">

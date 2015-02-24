@@ -1,17 +1,13 @@
 @font-face {
 			font-family: 'icomoon';  /*自定义的字体名称*/
-			src:url('../fonts/icomoon.eot?v77b0v');
-			src:url('../fonts/icomoon.eot?#iefixv77b0v') format('embedded-opentype'),
-				url('../fonts/icomoon.woff?v77b0v') format('woff'),
-				url('../fonts/icomoon.ttf?v77b0v') format('truetype'),
-				url('../fonts/icomoon.svg?v77b0v#icomoon') format('svg');
+			src:url('../fonts/icomoon.eot');
+			src:url('../fonts/icomoon.eot') format('embedded-opentype'),
+				url('../fonts/icomoon.woff') format('woff'),
+				url('../fonts/icomoon.ttf') format('truetype'),
+				url('../fonts/icomoon.svg') format('svg');
 			font-weight: normal;
 			font-style: normal;
 }
-
-
-
-
 
 header{
 	background-color: #A0202C;

@@ -14,16 +14,16 @@
 	<script type="text/javascript" src="js/selector.js"></script>
 </head>
 <body>
-	<header>
+	<header class="flex">
         <div id="back_arrow" class="back" onclick="location.href='current_position_details.html';">
             <div class="one"></div>
             <div class="two"></div>
             <span>返回</span>
         </div>
-		<div class="title">
+		<div class="title flex-2">
 			<span>市价平仓</span>
 		</div>
-		<div class="pic">
+		<div class="pic flex">
 			<a href="market_positions2.html"><img src="img/purse.png"></a>
 		</div>
 	</header>
@@ -65,12 +65,12 @@
             				<p>手数：</p>
             				<span class="font-red">最大可交易20000手</span>
             			</div>
-            			 <div class="selector left-selector">
-                        	<div class="s-left btn-bg">
+            			 <div class="selector left-selector flex">
+                        	<div class="s-left btn-bg flex">
                             	<div class="triangle-left"></div>
                         	</div> 
-                        	<div class="s-mid">10000</div> 
-                        	<div class="s-right btn-bg">
+                        	<div class="s-mid flex-1">10000</div> 
+                        	<div class="s-right btn-bg flex">
                             	<div class="triangle-right"></div>
                         	</div> 
                     	</div>
@@ -80,35 +80,38 @@
             			<div class="buy-in btn-bg">买进</div>
             		</div>
             		</div>
-            		<div id="offset" class="row">
-            			<div class="squared">
+            		<div id="offset" class="row flex">
+            			<div class="squared flex-2">
             				<input type="checkbox" value="None"/> 
                         	<span>允许成交价与报价的最大偏差</span>
                     	</div>
-            			<div class="selector">
-                        	<div class="s-left btn-bg">
+            			<div class="selector flex flex-1">
+                        	<div class="s-left btn-bg flex">
                             	<div class="triangle-left"></div>
                         	</div> 
-                        	<div class="s-mid s-mid-grey">10</div> 
-                        	<div class="s-right btn-bg">
+                        	<div class="s-mid s-mid-grey flex-1">10</div> 
+                        	<div class="s-right btn-bg flex">
                         	<div class="triangle-right"></div>
                         	</div> 
             			</div>
             		</div>
-            		<div id="backhand_position" class="row">
+            		
+            		<div id="backhand_position" class="row flex direction">
             			<div class="line-dashed"></div>
-            			<div class="squared">
+            			<div class="flex">
+            			<div class="squared flex-2">
             				<input type="checkbox" value="None"/> 
                         	<span>允许反手建仓</span>
                     	</div>
-            			<div class="selector">
-                        	<div class="s-left btn-bg">
+            			<div class="selector flex flex-1">
+                        	<div class="s-left btn-bg flex">
                             	<div class="triangle-left"></div>
                         	</div> 
-                        	<div class="s-mid s-mid-grey">10</div> 
-                        	<div class="s-right btn-bg">
+                        	<div class="s-mid s-mid-grey flex-1">10</div> 
+                        	<div class="s-right btn-bg flex">
                         	<div class="triangle-right"></div>
                         	</div> 
+            			</div>
             			</div>
             		</div>
             		<div class="button">

@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="css/current_position_detail.css">
 </head>
 <body>
-	<header>
+	<header class="flex">
         <div>
         <div id="back_arrow" class="back" onclick="location.href='index.html';">
             <div class="one"></div>
@@ -20,10 +20,10 @@
             <span>返回<span>
         </div>
 		</div>
-		<div class="title">
+		<div class="title flex-2">
 			<span>持仓明细</span>
 		</div>
-		<div class="pic">
+		<div class="pic flex">
 			<img src="img/purse.png">
 		</div>
 	</header>
@@ -73,37 +73,14 @@
 				</ul>
 				<div class="line-dashed"></div>
 			</div>
-			<!--<div id="operator" class="wrap-grey">
-				<div class="line">
-					<input type="button" value="市价平仓" class="btn-operate btn-bg-red" onclick="window.location.href='market_positions1.html'">
-					<input type="button" value="止盈止损" class="btn-operate btn-bg-blue" onclick="window.location.href='profit_and_loss.html'">
-				</div>
-				<div class="line">
-					<input type="button" value="撤销止盈" class="btn-operate btn-bg-grey">
-					<input type="button" value="撤销止损" class="btn-operate btn-bg-grey">
-				</div>
-			</div>-->
-			
-			<!-- <div id="operator" class="wrap-grey">
-				<div class="line">
-					<div class="btn-operate btn-bg-red"><a href="market_positions1.html">市价平仓</a></div>
-					<div class="btn-operate btn-bg-blue"><a href="profit_and_loss.html">止盈止损</a></div>
-				</div>
-				<div class="line">
-					<div class="btn-operate btn-bg-grey"><a href="javascript:void(0);">撤销止盈</a></div>
-					<div class="btn-operate btn-bg-grey"><a href="javascript:void(0);">撤消止损</a></div>
-				</div>
-			</div> -->
-
-
 			<div id="operator" class="wrap-grey">
 				<div class="line">
-					<a class="btn-operate btn-bg-red" href="market_positions1.html">市价平仓</a>
-					<a class="btn-operate btn-bg-blue" href="profit_and_loss.html">止盈止损</a>
+					<a class="btn-operate btn-bg-red flex-1" href="market_positions1.html">市价平仓</a>
+					<a class="btn-operate btn-bg-blue flex-1" href="profit_and_loss.html">止盈止损</a>
 				</div>
 				<div class="line">
-					<a class="btn-operate btn-bg-grey" href="javascript:void(0);">撤销止盈</a>
-					<a class="btn-operate btn-bg-grey" href="javascript:void(0);">撤消止损</a>
+					<a class="btn-operate btn-bg-grey flex-1" href="javascript:void(0);">撤销止盈</a>
+					<a class="btn-operate btn-bg-grey flex-1" href="javascript:void(0);">撤消止损</a>
 				</div>
 			</div>
 

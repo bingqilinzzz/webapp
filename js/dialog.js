@@ -10,11 +10,13 @@ JM.$package("MUI",function(J){
 	
 			$D.setStyle(elem,{
 				"opacity":1,
-				"visibility":"visible"
+				"visibility":"visible",
+				"display": ""
 			});
 			$D.setStyle(mask,{
 				"opacity":.8,
-				"visibility":"visible"
+				"visibility":"visible",
+				"display": ""
 			});
 			$E.fire(this ,"show");
 		},
@@ -41,7 +43,9 @@ JM.$package("MUI",function(J){
 		pop:function(elem,mask){
 			var self = this;
 			$D.setStyle(mask ,"opacity" ,0);
+			$D.setStyle(mask ,"display" , "");
 			$D.setStyle(elem , _transform,"scale(0.5)");
+			$D.setStyle(elem ,"display" , "block");
 
 			setTimeout(function(){
 				new J.Animation({
@@ -50,10 +54,12 @@ JM.$package("MUI",function(J){
 					use3d:self.use3d
 				}).setStyle({
 					"opacity":.8,
-					"visibility":"visible"
+					"visibility":"visible",
+					"display": ""
 				}).transit().setElems(elem).setStyle({
 					"opacity":1,
-					"visibility":"visible"
+					"visibility":"visible",
+					"display": ""
 				}).scale(1).transit(function(){
 					$E.fire(self ,"show");
 				});	
@@ -115,7 +121,8 @@ JM.$package("MUI",function(J){
 				use3d:self.use3d
 			}).setStyle({
 				"opacity":0,
-				"visibility":"hidden"
+				"visibility":"hidden",
+				"display": "none"
 			}).transit(function(){
 				$E.fire(self ,"hide");
 			});			
@@ -128,10 +135,12 @@ JM.$package("MUI",function(J){
 				use3d:self.use3d
 			}).setStyle({
 				"opacity":0,
-				"visibility":"hidden"
+				"visibility":"hidden",
+				"display": "none"
 			}).transit().setElems(elem).setStyle({
 				"opacity":0,
-				"visibility":"hidden"
+				"visibility":"hidden",
+				//"display": "none"
 			}).scale(.5).transit(function(){
 				$D.setStyle(elem , _transform,"");
 				$E.fire(self ,"hide");

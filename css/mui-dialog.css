@@ -19,7 +19,7 @@ body {
 	opacity: 0;
 
 }
-.dialog{
+/*.dialog{
 	visibility: hidden;
 	position: absolute;
 	width: 85%;
@@ -34,9 +34,27 @@ body {
 	color:#000;
 	/*position: relative;
 	vertical-align: middle;
-	display: inline-block;*/
+	display: inline-block;
+}*/
 
+.dialog {
+	visibility: hidden;
+	width: 85%;
+	background-color: #f1fbf0;
+	opacity: 0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	overflow: hidden;
+	color:#000;
+	display: none;
+	margin:50% auto;
 }
+
+
+
+
+
 .dialog > .header{
 	/*background: #fadb4e;
 	background: -webkit-gradient(linear, left top, left bottom, from( #fceda7), to( #fbef7e));

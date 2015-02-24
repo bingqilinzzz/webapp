@@ -6,13 +6,6 @@ header{
 	top: 0;
 	color: #ffffff;
 }
-header, header .pic{
-	display: flex;
-    display: -webkit-box;
-    display: -webkit-flex; 
-    display: -moz-box;
-    display: -webkit-flex;
-}
 header .pic {
 	justify-content:flex-end;
 	-webkit-justify-content:flex-end;
@@ -37,11 +30,6 @@ header .back span{
 	padding-left: 20px;
 }
 header .title{
-	flex:2;
-    -webkit-box:2;
-    -webkit-flex:2;
-    -moz-box:2;
-    -webkit-flex:2;
 	text-align: center;
 	font-size: 16px;
 	font-weight: bold;
