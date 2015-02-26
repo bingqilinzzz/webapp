@@ -19,23 +19,6 @@ body {
 	opacity: 0;
 
 }
-/*.dialog{
-	visibility: hidden;
-	position: absolute;
-	width: 85%;
-	max-width: 500px; 
-	margin: 50% 7%;
-	background-color:#f1fbf0;
-	opacity: 0;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-	overflow: hidden;
-	color:#000;
-	/*position: relative;
-	vertical-align: middle;
-	display: inline-block;
-}*/
 
 .dialog {
 	visibility: hidden;
@@ -55,21 +38,13 @@ body {
 
 
 
-.dialog > .header{
-	/*background: #fadb4e;
-	background: -webkit-gradient(linear, left top, left bottom, from( #fceda7), to( #fbef7e));
-	background: -webkit-linear-gradient( #fceda7, #fbef7e);
-	background: -moz-linear-gradient( #fceda7, #fbef7e);
-	background: -ms-linear-gradient( #fceda7, #fbef7e);
-	background: -o-linear-gradient( #fceda7 , #fbef7e);
-	background: linear-gradient( #fceda7, #fbef7e);	*/
-
+/*.dialog > .header{
 	flex-direction:column;
     -webkit-box-direction:column;
     -webkit-flex-direction:column;
     -moz-box-direction:column;
     -webkit-flex-direction:column;
-}
+}*/
 .header h4  {
 	text-align: center;
 	padding: 1em 0;
@@ -80,13 +55,13 @@ body {
 }
 
 
-.dialog .header, .dialog .content {
+/*.dialog .header, .dialog .content {
 	display: flex;
     display: -webkit-box;
     display: -webkit-flex; 
     display: -moz-box;
     display: -webkit-flex;
-}
+}*/
 .dialog .content {
 	border-top: solid 1px #ccc;
 }

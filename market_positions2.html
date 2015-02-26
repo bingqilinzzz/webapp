@@ -5,7 +5,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="#a0202c">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,uer-scalabe=no"> 
 	<meta name="theme-color" content="#a0202c">
-	<title>持仓明细</title>
+	<title>市价平仓2</title>
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
 	<link rel="stylesheet" type="text/css" href="css/public.css">
 	<link rel="stylesheet" type="text/css" href="css/Inner_header.css">
@@ -49,7 +49,7 @@
 				</ul>
 			</div>
 
-			<div id="title">
+			<div id="title" class="title-table">
 				<table>
 					<thead>
 						<tr>
@@ -72,19 +72,21 @@
 					</tbody>
 				</table>
 			</div>
+			<div class="line-solid"></div>
 			<div id="main">
-				<div id="current_price" class="row">
+				<div id="current_price" class="current-price row">
 					<div class="name">当前价格：</div>
 					<div class=" price btn-bg">3777</div>
 				</div>
-				<div id="trades" class="row">
+				<div id="trades" class="row flex direction">
             		<div class="line-dashed"></div>
-            		<div class="trades-left">
+            		<div class="flex">
+            		<div class="trades-left flex-1 flex direction left-selector">
             			<div class="name">
             				<p>手数：</p>
             				<span class="font-red">最大可交易20000手</span>
             			</div>
-            			 <div class="selector left-selector flex">
+            			 <div class="selector flex">
                         	<div class="s-left btn-bg flex">
                             	<div class="triangle-left"></div>
                         	</div> 
@@ -94,9 +96,10 @@
                         	</div> 
                     	</div>
             		</div>
-            		<div class="trades-right">
-            			<div class="sell-out btn-bg">卖出</div>
-            			<div class="buy-in btn-bg">买进</div>
+            		<div class="trades-right flex-1 flex">
+            			<div class="sell-out btn-bg flex-1">卖出</div>
+            			<div class="buy-in btn-bg flex-1">买进</div>
+            		</div>
             		</div>
             		</div>
             		<div id="offset" class="row flex">
@@ -163,11 +166,11 @@
 	<div class="container">
 	<div class="mask"></div>
 	<div id="dialog" class="dialog">
-		<div class="header">
+		<div class="header direction flex">
 			<h4>市价平仓结果</h4>
 			<p class="info">市价平仓结果成功！</p>
 		</div>
-		<div class="content">
+		<div class="content flex">
        		<p id="continue" class="p_back font-blue"><a href="javascript:void(0);">继续平仓</a></p>
        		<div class="line-right"></div>
        		<p class="p_back font-blue"><a href="current_position_details.html">查看行情</a></p>

@@ -5,7 +5,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="#a0202c">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,uer-scalabe=no"> 
 	<meta name="theme-color" content="#a0202c">
-	<title>持仓明细</title>
+	<title>止盈止损</title>
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
 	<link rel="stylesheet" type="text/css" href="css/public.css">
 	<link rel="stylesheet" type="text/css" href="css/Inner_header.css">
@@ -34,7 +34,7 @@
 	
 	<div id="wrap">
 		<div id="content">
-			<div id="title">
+			<div id="title" class="title-table">
 				<table>
 					<thead>
 						<tr>
@@ -57,16 +57,16 @@
 					</tbody>
 				</table>
 			</div>
+			<div class="line-solid"></div>
 			<div id="main">
-				<div id="current_price">
-					<div class="price-left">
-						<div class="name">
-						<p>当前价格：</p></div>
-						<div class="price btn-bg">3777</div>
+				<div id="current_price" class="current-price row flex">
+					<div class="price-left flex direction flex-1">
+						<div class="name">当前价格：</div>
+						<div class="price btn-bg left-selector">3777</div>
 					</div>
-            			<div class="price-right">
-            				<div class="sell-out btn-bg">卖出</div>
-            				<div class="buy-in btn-bg">买进</div>
+            			<div class="price-right flex flex-1">
+            				<div class="sell-out btn-bg flex-1">卖出</div>
+            				<div class="buy-in btn-bg flex-1">买进</div>
             			</div>
             	</div>
             	<div id="deadline" class="row">
@@ -81,15 +81,15 @@
             			</div>
             		</div>	
             	</div>
-            	<div id="loss_and_profit" class="row">
+            	<div id="loss_and_profit" class="row flex direction">
             	<div class="line-dashed"></div>
-            	<div class="loss">
+            	<div class="loss flex">
             		<div class="squared">
             			<input type="checkbox" value="None"/> 
             			<label for="squared"></label>
             			<span>止损：</span>
             		</div>
-            		<div class="selector flex">
+            		<div class="selector flex flex-1">
                         <div class="s-left btn-bg flex">
                             <div class="triangle-left"></div>
                         </div> 
@@ -101,13 +101,13 @@
             		<div class="compare"> &lt; </div>
             		<div class="value btn-bg flex-1">3748</div>
             	</div>
-            	<div class="profit">
+            	<div class="profit flex">
             		<div class="squared">
             			<input type="checkbox" value="None"/> 
                         <label for="squared"></label>
                         <span>止盈：</span>
                     </div>
-            		<div class="selector flex">
+            		<div class="selector flex flex-1">
                         <div class="s-left btn-bg flex">
                             <div class="triangle-left"></div>
                         </div> 
@@ -155,11 +155,11 @@
 	<div class="container">
 	<div class="mask"></div>
 	<div id="dialog" class="dialog">
-		<div class="header">
+		<div class="header direction flex">
 			<h4>止盈撤销结果</h4>
 			<p class="info">止盈撤销操作成功！</p>
 		</div>
-		<div class="content">
+		<div class="content flex">
        		<p id="continue" class="p_back font-blue"><a href="javascript:void(0);">确定</a></p>
 		</div>
 
