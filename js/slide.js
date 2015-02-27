@@ -25,7 +25,7 @@ JM.$package("MUI",function(J){
 			this.fastChange = options.fastChange;
 			this._sizeAdjust();
 			this._moveTo(this.currentIndex * -this.contentWidth);
-			this.bindHandlers();
+			//this.bindHandlers();
 		},
 		bindHandlers:function(){
 			var startX = 0;

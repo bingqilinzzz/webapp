@@ -23,18 +23,26 @@ JM.$package("MUI",function(J){
 			}
 		},
 		_onStartEvt:function(e){
+			//console.log(0);
 			var elem = this.elem;
+			//console.log("0001");
 			var target = e.target||e.srcElement;
-			if(!$D.closest(target ,"." + this.wrapClassName)) return;
+			//console.log("0003");
+			//if(!$D.closest(target ,"." + this.wrapClassName)) return;
+			//console.log("0003");
 			dragingElem = target;
+			//console.log("0077");
 			var tou = e.touches? e.touches[0] : e;
 			var elemLeft = hasClientRect ? elem.getBoundingClientRect().left : elem.offsetLeft;
 
 			var x = tou.clientX - elemLeft;
 			this.startX = x;//相对于container
+			//console.log(1);
 		},
 		_onMoveEvt:function(e){
+			//console.log(2);
 			if(!dragingElem) return;
+			//console.log(222);
 			e.preventDefault();
 			var elem = this.elem;
 			var tou = e.touches? e.touches[0] : e;
@@ -49,16 +57,17 @@ JM.$package("MUI",function(J){
 			this._removeAnimation();
 			this._moveTo(this.currentIndex * -this.contentWidth + this.moveDist);
 			// e.preventDefault();
-				
+				//console.log(22);
 		},
 		_onEndEvt:function(e){
+		//	console.log(3);
 			if(!dragingElem) return;
 
 			var d = this.moveDist;
 			var elem = this.elem;
 			var currentIndex = this.currentIndex;
 			var elemLeft = hasClientRect ? elem.getBoundingClientRect().left : elem.offsetLeft;
-			var elemHalf = elemLeft + this.contentWidth/2;
+			var elemHalf = elemLeft + this.contentWidth/4;
 			
 			if(d > elemHalf) {
 				currentIndex = Math.max(0 ,currentIndex - 1);
@@ -69,11 +78,15 @@ JM.$package("MUI",function(J){
 			// self._moveTo(currentIndex * -self.contentWidth);
 			this.slideTo(currentIndex);
 			dragingElem = null;
+		//	console.log(4);
 		},
-		bindHandlers:function(){
+		bindHandlers:function(iframe){
 			var _handleEvent = this._handleEvent = J.bind(this._handleEvent , this);
 			SwipeChange.callSuper(this,"bindHandlers");
-			$E.on(this.elem,[startEvt,moveEvt,endEvt].join(" "), _handleEvent);
+		//	$E.on(this.elem,[startEvt,moveEvt,endEvt].join(" "), _handleEvent);
+		//	iframe.document.addEventListener('click',function(event){clic(this.id);},false);
+			$E.on(document.getElementById(iframe).contentDocument,[startEvt,moveEvt,endEvt].join(" "), _handleEvent);
+			//console.log(document.getElementById(iframe).contentDocument);
 		},
 		destory:function(){
 			$E.off(this.elem,[startEvt,moveEvt,endEvt].join(" "), this._handleEvent);	
