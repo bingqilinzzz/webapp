@@ -40,7 +40,7 @@ ul {
     position: absolute;
     top: 40px;
     bottom: 56px;
-    overflow: auto;
+    overflow: hidden;
 }
 
 #content .row {
