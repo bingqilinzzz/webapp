@@ -11,19 +11,21 @@
 iframe {
 	width: 100%;
 	height: 100%;
+	border:0;
+	/*overflow: hidden;*/
 }
-.slide {
-	position: absolute;
-	top: 0;
-	bottom:0;
+.wrap {
+	width: 100%;
+	height: 100%;
 }
+
 </style>
 </head>
 <body>
 <div id='swipeChange' class="slide">
-  	<div class="wrap">
-		<li><iframe id="iframe0" frameborder="0" scrolling="no" src="index.html"></iframe></li>
-		<li><iframe id="iframe1" frameborder="0" scrolling="no" src="market.html"></iframe></li>
+  	<div class="wrap" id="wrap">
+	<!--	<li><iframe id="iframe0" frameborder="0" scrolling="no" src="index.html"></iframe></li>
+		<li><iframe id="iframe1" frameborder="0" scrolling="no" src="market.html"></iframe></li>  -->
 	</div>
 </div>	
 	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
@@ -31,13 +33,61 @@ iframe {
 	<script type="text/javascript" src="js/slide.js"></script>
 	<script type="text/javascript" src="js/swipechange.js"></script>
 	<script type="text/javascript">
-	var sc = MUI.SwipeChange({
+	var options = {
 		id:"swipeChange",
 		currentIndex:0,
 		fastChange:true
-	});
-	sc.bindHandlers("iframe0");
-	sc.bindHandlers("iframe1");
+	};
+	var sc = MUI.SwipeChange(options);
+
+	/* 动态添加页面 */
+	newpage("index.html");
+	//newpage("market.html");
+
+	function newpage(url){
+		var para=document.createElement("li");
+		var node=document.createElement("iframe");
+		node.src=url;
+		node.scrolling="no";
+		node.id="iframe"+sc.count;
+		para.appendChild(node);
+		var element=document.getElementById("wrap");
+		element.appendChild(para);
+		var num=sc.count;
+
+		$("#"+node.id).load(function() {
+			sc.bindHandlers(node.id);
+			$(document.getElementById(node.id).contentWindow.document.body).find("a").click(function(event){
+				var url=$(this).attr("href");
+				event.preventDefault();
+				newpage(url);
+				console.log("num1="+num);
+			});
+
+			$(document.getElementById(node.id).contentWindow.document.body).find("[data-link]").click(function(){
+			//	var url=$(this).attr("data-link");
+				var url=$(this).data("link");
+			//	console.log(url);
+			//	alert(url);
+				newpage(url);
+			});
+
+
+			$(document.getElementById(node.id).contentWindow.document.body).find("[data-back]").click(function(){
+			//	event.preventDefault();
+				//console.log("click");
+				sc.slideTo(num-1);
+				$("li:last").remove();
+				sc.currentIndex = options.currentIndex -1 ;
+				sc.count = sc.count - 1;
+			});
+			sc.slideTo(num);
+		});
+		options.currentIndex = sc.count;
+		sc.init(options);	
+	}
+
+	
 
 	</script>
 </body>

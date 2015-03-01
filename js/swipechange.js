@@ -75,8 +75,14 @@ JM.$package("MUI",function(J){
 			else if(d < - elemHalf) {
 				currentIndex = Math.min(this.contents.length - 1 ,currentIndex + 1);
 			}
-			// self._moveTo(currentIndex * -self.contentWidth);
+		   // self._moveTo(currentIndex * -self.contentWidth);
 			this.slideTo(currentIndex);
+			if(d > elemHalf && options.currentIndex > 0){
+				$("li:last").remove();
+				options.currentIndex = options.currentIndex -1 ;
+				this.init(options);
+		//		console.log(options);
+			}
 			dragingElem = null;
 		//	console.log(4);
 		},
@@ -84,9 +90,8 @@ JM.$package("MUI",function(J){
 			var _handleEvent = this._handleEvent = J.bind(this._handleEvent , this);
 			SwipeChange.callSuper(this,"bindHandlers");
 		//	$E.on(this.elem,[startEvt,moveEvt,endEvt].join(" "), _handleEvent);
-		//	iframe.document.addEventListener('click',function(event){clic(this.id);},false);
 			$E.on(document.getElementById(iframe).contentDocument,[startEvt,moveEvt,endEvt].join(" "), _handleEvent);
-			//console.log(document.getElementById(iframe).contentDocument);
+		//	console.log(document.getElementById(iframe).contentDocument);
 		},
 		destory:function(){
 			$E.off(this.elem,[startEvt,moveEvt,endEvt].join(" "), this._handleEvent);	
