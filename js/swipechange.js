@@ -72,12 +72,12 @@ JM.$package("MUI",function(J){
 			if(d > elemHalf) {
 				currentIndex = Math.max(0 ,currentIndex - 1);
 			}
-			else if(d < - elemHalf) {
+			else if(d < - elemHalf && options.currentIndex>0) {
 				currentIndex = Math.min(this.contents.length - 1 ,currentIndex + 1);
 			}
 		   // self._moveTo(currentIndex * -self.contentWidth);
 			this.slideTo(currentIndex);
-			if(d > elemHalf && options.currentIndex > 0){
+			if(d > elemHalf && options.currentIndex>0){
 				$("li:last").remove();
 				options.currentIndex = options.currentIndex -1 ;
 				this.init(options);
