@@ -1,0 +1,17 @@
+#content table {
+	padding-bottom: 10px;
+}
+#title table tbody tr:last-child td{
+	padding-bottom: 10px;
+	border-bottom: solid 1px #c5c5c5;
+}
+
+
+/* stop loss and take profit for 6-6*/
+#loss_and_profit .loss {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+#loss_and_profit .profit {
+    padding-bottom: 15px;
+}

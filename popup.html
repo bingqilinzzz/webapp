@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,uer-scalabe=no"/>
+  <title>Site Title</title>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+
+  <!-- Add an optional button to open the popup -->
+  <button class="my_popup_open">Open popup</button>
+
+  <!-- Add content to the popup -->
+  <div id="my_popup" class="detail">
+      <p class="title">市价平仓结果</p>
+      <p class="info">市价平仓结果成功!</p>
+      <div class="back">
+        <p class="p_back my_popup_close"><a href="javascript:void(0);">继续平仓</a></p>
+        <div class="line-right"></div>
+        <p class="p_back my_popup_close"><a href="javascript:void(0);">查看行情</a></p>
+      </div>
+    <!-- Add an optional button to close the popup -->
+    <!--<button class="my_popup_close">继续平仓</button>-->
+
+  </div>
+
+  <!-- Include jQuery -->
+  <script src="js/jquery-2.1.3.min.js"></script>
+
+  <!-- Include jQuery Popup Overlay -->
+  <script src="js/jquery.popupoverlay.js"></script>
+
+  <script>
+    $(document).ready(function() {
+
+      // Initialize the plugin
+      $('#my_popup').popup();
+
+    });
+  </script>
+
+</body>
+</html>

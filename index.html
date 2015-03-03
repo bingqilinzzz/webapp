@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#a0202c">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,uer-scalabe=no"> 
+	<meta name="theme-color" content="#a0202c">
+	<meta name="apple-touch-fullscreen" content="YES" />
+	<title>持仓列表</title>
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+</head>
+<body>
+
+	<header class="dealMenu">
+		<ul class="flex">
+			<li>
+				<a class="a_dealDay a_active">持仓</a>
+			</li>
+			<li>
+				<a class="a_dealHistory" href="javascript:void();">汇总</a>		
+			</li>
+			<li>
+				<a class="a_dealHistory" href="javascript:void();">委托</a>		
+			</li>
+		</ul>
+	</header>
+	
+	<div id="wrap">
+	<div id="content">
+	<div class="accountInfo">
+		<span class="accountInfo_j accountInfo_l"><i></i></span>
+		<span class="accountInfo_j accountInfo_r"><i></i></span>
+		<ul class="accountInfo_title">
+			<li><a href="javascript:void();">账户名称</a></li>
+			<li><a href="javascript:void();" class="accountInfo_ul_li_a">当前权益</a></li>
+			<li><a href="javascript:void();" class="accountInfo_ul_li_a">浮动盈亏</a></li>
+			<li><a href="javascript:void();" class="accountInfo_ul_li_a">余额</a></li>
+		</ul>
+		<ul class="accountInfo_num">
+			<li><a href="javascript:void();">1420000</a></li>
+			<li><a href="javascript:void();" class="accountInfo_ul_li_a">50000</a></li>
+			<li><a href="javascript:void();" class="accountInfo_ul_li_a"><span class="font-red">2400.00</span></a></li>
+			<li><a href="javascript:void();" class="accountInfo_ul_li_a">2400.00</a></li>
+		</ul>
+	</div>
+
+	<div class="information">
+		<table>
+			<thead>
+				<tr>
+					<th>商品</th>
+					<th>数量</th>
+					<th>浮动盈亏</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr data-link="current_position_details.html">
+					<td>
+					<p><span class="font-red">卖出</span>大圆银100kg</p>
+					<p class="size11">单号：xxxxxxx</p>
+					<p class="size12">建仓价:2600</p>
+					</td>
+					<td>100</td>
+					<td class="font-red">3800</td>
+				</tr>
+				<tr>
+					<td>
+					<p><span class="font-green">买入</span>大圆银100kg</p>
+					<p class="size11">单号：xxxxxxx</p>
+					<p class="size12">建仓价:2600</p>
+					</td>
+					<td>100</td>
+					<td class="font-green">-200</td>
+				</tr>
+				<tr>
+					<td>
+					<p><span class="font-red">卖出</span>大圆银100kg</p>
+					<p class="size11">单号：xxxxxxx</p>
+					<p class="size12">建仓价:2000</p>
+					</td>
+					<td>100</td>
+					<td class="font-red">2000</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	</div>
+	</div>
+
+
+	<!--	<footer>
+		<ul>
+			<li><a><img src="img/market.svg"><span>行情</span></a></li>
+			<li><a><img src="img/news.svg"><span>资讯</span></a></li>
+			<li><a><img src="img/position.svg"><span>仓位</span></a></li>
+			<li><a><img src="img/deal.svg"><span>成交</span></a></li>
+			<li><a><img src="img/info.svg"><span>我的</span></a></li>
+		</ul>
+	</footer> -->
+	<footer>
+		<ul>
+			<li><a><span></span><span>行情</span></a></li>
+			<li><a><span></span><span>资讯</span></a></li>
+			<li><a class="font-active"><span></span><span>仓位</span></a></li>
+			<li><a><span></span><span>成交</span></a></li>
+			<li><a><span></span><span>我的</span></a></li>
+		</ul>
+	</footer> 
+</body>
+</html>

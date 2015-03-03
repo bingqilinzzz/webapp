@@ -1,0 +1,42 @@
+#content table {
+	padding-bottom: 10px;
+}
+#title table tbody tr:last-child td{
+	padding-bottom: 10px;
+	border-bottom: 1px solid #c5c5c5;
+}
+
+
+/*  trades*/
+#trades .trades-left p{
+    float: left;
+} 
+#trades .trades-left span{
+    font-size: 11px;
+    text-decoration: underline;
+}
+#trades .trades-right {
+    align-items:flex-end;
+    -webkit-align-items:flex-end;
+}
+
+
+
+
+/*offset and backhand_position*/
+#offset .squared, #backhand_position .squared{
+	height: 30px;
+	line-height: 30px;
+}
+#offset .squared input[type=checkbox], #backhand_position .squared input[type=checkbox] {
+	width: 14px;
+	height: 14px;
+	vertical-align: middle;
+}
+#offset .squared span, #backhand_position .squared span {
+	font-size: 11px;
+	color: #615f5d;
+}
+#backhand_position .squared, #backhand_position .selector {
+	padding:10px 0 20px 0;
+}

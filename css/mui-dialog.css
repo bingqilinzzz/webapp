@@ -1,0 +1,77 @@
+.font-blue {
+	color: #007dff;
+}
+.font-grey {
+	color: #818080;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+
+.mask{
+	visibility: hidden;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: 0;
+
+}
+
+.dialog {
+	visibility: hidden;
+	width: 85%;
+	background-color: #f1fbf0;
+	opacity: 0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	overflow: hidden;
+	color:#000;
+	display: none;
+	margin:50% auto;
+}
+
+
+
+
+
+/*.dialog > .header{
+	flex-direction:column;
+    -webkit-box-direction:column;
+    -webkit-flex-direction:column;
+    -moz-box-direction:column;
+    -webkit-flex-direction:column;
+}*/
+.header h4  {
+	text-align: center;
+	padding: 1em 0;
+}
+.header p {
+	text-align: center;
+	padding: 0.3em 0 0.6em;
+}
+
+
+/*.dialog .header, .dialog .content {
+	display: flex;
+    display: -webkit-box;
+    display: -webkit-flex; 
+    display: -moz-box;
+    display: -webkit-flex;
+}*/
+.dialog .content {
+	border-top: solid 1px #ccc;
+}
+.dialog .content, .content .line-right{
+	height: 42px;
+}
+.content .line-right {
+	width: 0;
+	border-right: 1px solid #ccc;
+}
+.dialog .content p {
+	margin: auto;
+}
